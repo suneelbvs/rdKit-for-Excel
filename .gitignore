@@ -62,3 +62,6 @@ dev-certs/
 build/
 *.manifest
 *.spec.bak
+
+# --- Claude Code ---
+.claude/

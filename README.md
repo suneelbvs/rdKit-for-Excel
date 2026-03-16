@@ -62,7 +62,7 @@ The server runs entirely locally — no data leaves your machine.
 
 **Requirements:** Microsoft Excel for Mac (Microsoft 365 or standalone 2019+)
 
-1. Download `ChemToolsInstaller.dmg` from the [Releases](../../releases) page
+1. Download `ChemToolsInstaller.dmg` from the [Releases](https://github.com/suneelbvs/rdKit-for-Excel/releases) page
 2. Open the DMG and double-click **Install ChemTools.command**
 3. When prompted "Launch ChemTools now?" press **Y**
 4. Excel opens with ChemTools loaded in the ribbon
@@ -77,7 +77,7 @@ On subsequent launches, open **ChemTools.app** from `~/Applications/` — it sta
 
 **Requirements:** Microsoft Excel for Windows (Microsoft 365 or standalone 2019+)
 
-1. Download `ChemToolsSetup.exe` from the [Releases](../../releases) page
+1. Download `ChemToolsSetup.exe` from the [Releases](https://github.com/suneelbvs/rdKit-for-Excel/releases) page
 2. Run the installer — it requires no administrator privileges
 3. Follow the wizard; choose whether to auto-start the server with Windows
 4. Excel opens with ChemTools loaded in the ribbon
@@ -95,7 +95,7 @@ The server runs silently in the background. If you need to restart it manually, 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/Excel_plugin.git
+git clone https://github.com/suneelbvs/rdKit-for-Excel.git
 cd Excel_plugin
 
 # 2. Install frontend dependencies
@@ -255,8 +255,8 @@ If you use this tool in your research, please consider citing or acknowledging t
 
 Contributions, bug reports, and feature requests are very welcome.
 
-- **Bug / issue** → [Open an issue](../../issues)
-- **Feature idea** → [Start a discussion](../../discussions)
+- **Bug / issue** → [Open an issue](https://github.com/suneelbvs/rdKit-for-Excel/issues)
+- **Feature idea** → [Start a discussion](https://github.com/suneelbvs/rdKit-for-Excel/discussions)
 - **Pull request** → Fork the repo, make changes, open a PR against `main`
 
 Please keep PRs focused — one feature or fix per PR.
