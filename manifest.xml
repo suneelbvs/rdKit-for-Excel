@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+
+  <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Atomicas</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Atomicas ChemTools"/>
+  <Description DefaultValue="RDKit-powered cheminformatics for Excel"/>
+  <IconUrl DefaultValue="http://localhost:8000/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="http://localhost:8000/assets/icon-128.png"/>
+  <SupportUrl DefaultValue="https://atomicas.com"/>
+  <AppDomains>
+    <AppDomain>http://localhost:8000</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="http://localhost:8000/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <Runtimes>
+          <Runtime resid="Taskpane.Url" lifetime="long" />
+        </Runtimes>
+        <AllFormulas>
+          <ExtensionPoint xsi:type="CustomFunctions">
+            <Script>
+              <Script.Value resid="Functions.Script.Url"/>
+            </Script>
+            <Page>
+              <Page.Value resid="Functions.Page.Url"/>
+            </Page>
+            <Metadata>
+              <Metadata.Value resid="Functions.Metadata.Url"/>
+            </Metadata>
+            <Namespace>
+              <Namespace.Value resid="Functions.Namespace"/>
+            </Namespace>
+          </ExtensionPoint>
+        </AllFormulas>
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <FunctionFile resid="Functions.Page.Url"/>
+
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="CommandsGroup">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TaskpaneButton">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+
+                <Control xsi:type="Button" id="RenderButton">
+                  <Label resid="RenderButton.Label"/>
+                  <Supertip>
+                    <Title resid="RenderButton.Label"/>
+                    <Description resid="RenderButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>renderStructures</FunctionName>
+                  </Action>
+                </Control>
+
+                <Control xsi:type="Button" id="ComputeButton">
+                  <Label resid="ComputeButton.Label"/>
+                  <Supertip>
+                    <Title resid="ComputeButton.Label"/>
+                    <Description resid="ComputeButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>computeProperties</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="http://localhost:8000/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="http://localhost:8000/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="http://localhost:8000/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://atomicas.com"/>
+        <bt:Url id="Commands.Url" DefaultValue="http://localhost:8000/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="http://localhost:8000/taskpane.html"/>
+        <bt:Url id="Functions.Script.Url" DefaultValue="http://localhost:8000/functions.js"/>
+        <bt:Url id="Functions.Page.Url" DefaultValue="http://localhost:8000/functions.html"/>
+        <bt:Url id="Functions.Metadata.Url" DefaultValue="http://localhost:8000/functions.json"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Functions.Namespace" DefaultValue="CHEM"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with ChemTools!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="ChemTools"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Open ChemTools"/>
+        <bt:String id="RenderButton.Label" DefaultValue="Embed Structure Images"/>
+        <bt:String id="ComputeButton.Label" DefaultValue="Compute Properties"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="RDKit-powered cheminformatics for Excel."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open the ChemTools panel."/>
+        <bt:String id="RenderButton.Tooltip" DefaultValue="Render molecular structure images from SMILES — each image is embedded and sized to fit its cell (250×200px)."/>
+        <bt:String id="ComputeButton.Tooltip" DefaultValue="Compute molecular properties."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

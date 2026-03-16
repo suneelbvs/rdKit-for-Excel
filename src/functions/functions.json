@@ -1,0 +1,69 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/custom-functions-metadata-schema/custom-functions-metadata-schema.json",
+  "functions": [
+    {
+      "id": "MW",
+      "name": "MW",
+      "description": "Returns molecular weight of a molecule from its SMILES string.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "LOGP",
+      "name": "LOGP",
+      "description": "Returns the LogP (lipophilicity) of a molecule.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "TPSA",
+      "name": "TPSA",
+      "description": "Returns the topological polar surface area of a molecule.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "HBD",
+      "name": "HBD",
+      "description": "Returns the hydrogen bond donor count.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "HBA",
+      "name": "HBA",
+      "description": "Returns the hydrogen bond acceptor count.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "LIPINSKI",
+      "name": "LIPINSKI",
+      "description": "Returns PASS or FAIL for Lipinski Rule of 5.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "string"}
+    },
+    {
+      "id": "QED",
+      "name": "QED",
+      "description": "Returns quantitative estimate of drug-likeness (0-1).",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "number"}
+    },
+    {
+      "id": "SCAFFOLD",
+      "name": "SCAFFOLD",
+      "description": "Returns the Murcko scaffold SMILES.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "result": {"type": "string"}
+    },
+    {
+      "id": "SMI2IMAGE",
+      "name": "SMI2IMAGE",
+      "description": "Renders a molecular structure image into the calling cell from a SMILES string.",
+      "parameters": [{"name": "smiles", "description": "SMILES string", "type": "string"}],
+      "options": {"requiresAddress": true},
+      "result": {"type": "string"}
+    }
+  ]
+}

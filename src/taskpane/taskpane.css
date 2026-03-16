@@ -1,0 +1,163 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Force light mode — override dark mode in all WebView contexts */
+:root { color-scheme: light !important; }
+
+html {
+  background: #ffffff !important;
+  color: #333333 !important;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #333333 !important;
+  background: #ffffff !important;
+}
+
+/* Explicit dark-mode override for every text-bearing element */
+@media (prefers-color-scheme: dark) {
+  html, body, main, section, p, h1, h2, h3, label, td, th, span {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+  }
+  .section { border-color: #e0e0e0 !important; background: #ffffff !important; }
+  .section h2 { color: #1a6b3a !important; }
+  .hint { color: #666666 !important; }
+  .properties-table th, .functions-table th { background: #f5f5f5 !important; color: #555555 !important; }
+  .properties-table td, .functions-table td { color: #333333 !important; }
+  .btn.secondary { background: #f0f0f0 !important; color: #333333 !important; border-color: #cccccc !important; }
+  #app { background: #ffffff !important; }
+}
+
+.header {
+  background: #1a6b3a;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green { background: #4caf50; }
+.dot.red { background: #f44336; }
+.dot.yellow { background: #ff9800; }
+
+main { padding: 12px; }
+
+.section {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.section h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a6b3a;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: #1a6b3a;
+  color: white;
+}
+
+.btn.primary:hover { background: #155730; }
+
+.btn.secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn.secondary:hover { background: #e0e0e0; }
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#structure-preview {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#structure-img {
+  max-width: 100%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.properties-table, .functions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.properties-table th, .properties-table td,
+.functions-table th, .functions-table td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.properties-table th, .functions-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #555;
+}
+
+.pass { color: #4caf50; font-weight: 600; }
+.fail { color: #f44336; font-weight: 600; }
+
+.hint {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}

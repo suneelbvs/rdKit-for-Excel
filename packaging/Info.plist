@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>ChemTools</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.atomicas.chemtools</string>
+
+    <key>CFBundleName</key>
+    <string>ChemTools</string>
+
+    <key>CFBundleDisplayName</key>
+    <string>Atomicas ChemTools</string>
+
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+
+    <key>LSMinimumSystemVersion</key>
+    <string>11.0</string>
+
+    <key>NSHighResolutionCapable</key>
+    <true/>
+
+    <!-- Allow HTTP to localhost (needed during cert setup) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+
+    <!-- Background-only: no Dock icon while server is running -->
+    <key>LSUIElement</key>
+    <true/>
+</dict>
+</plist>
