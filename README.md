@@ -3,8 +3,6 @@
 > **RDKit-powered cheminformatics directly inside Microsoft Excel.**
 > Compute molecular properties, render 2D structures, and run custom Excel formulas — all from a lightweight local server with no cloud dependency.
 
-**Author:** Dr Suneel Kumar BVS — [suneelkumar.bvs@gmail.com](mailto:suneelkumar.bvs@gmail.com)
-
 This tool is part of my ongoing research work in computational chemistry and drug discovery. It was built to reduce the friction of moving between cheminformatics tools and spreadsheets during lead optimisation and ADMET analysis workflows.
 
 **Inputs, suggestions, and contributions are very welcome.**
@@ -247,7 +245,7 @@ This add-in was developed by **Dr Suneel Kumar BVS** as part of research in comp
 
 If you use this tool in your research, please consider citing or acknowledging this repository.
 
-**Contact:** [suneelkumar.bvs@gmail.com](mailto:suneelkumar.bvs@gmail.com)
+**Contact Author:** **Author:** Dr Suneel Kumar BVS — [suneelkumar.bvs@gmail.com](mailto:suneelkumar.bvs@gmail.com)
 
 ---
 
