@@ -124,11 +124,30 @@ bash packaging/build.sh
 ```
 
 **Windows** *(must be run on a Windows machine)*:
+
+See the full step-by-step guide: [packaging/windows/WINDOWS_BUILD_INSTRUCTIONS.md](packaging/windows/WINDOWS_BUILD_INSTRUCTIONS.md)
+
+Quick summary:
 ```bat
+REM 1. Install prerequisites: Miniconda, Node.js, Inno Setup 6
+REM    https://docs.conda.io/en/latest/miniconda.html
+REM    https://nodejs.org
+REM    https://jrsoftware.org/isdl.php
+
+REM 2. Create Python environment
+conda create -n cadd python=3.11 -y
+conda activate cadd
+conda install -c conda-forge rdkit -y
+pip install fastapi uvicorn[standard] pillow starlette python-multipart pyinstaller
+
+REM 3. Install Node dependencies (from project root)
+npm install
+
+REM 4. Run the build
 packaging\windows\build.bat
+
 REM Output: release\windows\ChemToolsSetup.exe
-REM Requires Inno Setup 6 for the .exe wizard (falls back to .zip without it)
-REM https://jrsoftware.org/isdl.php
+REM (falls back to ChemToolsSetup.zip if Inno Setup is not installed)
 ```
 
 ---
